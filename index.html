@@ -3,33 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>stackup</title>
-
+  <title>StackUp - 개발자들의 특별한 공간</title>
+  
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
   <!-- Header -->
   <header class="fixed-top">
     <nav class="header-nav">
       <div class="container">
         <div class="nav-content">
-          <!-- 로고 -->
-          <a class="logo" href="main.html">
-            <img src="stackuplogo.png" alt="로고" height="40">
+          <a class="logo" href="#main-visual">
+            <img src="stackuplogo.png" alt="StackUp 로고" height="40">
           </a>
-
-          <!-- 햄버거 메뉴 버튼 (모바일) -->
+          
           <button class="hamburger-btn" type="button" id="hamburgerBtn">
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
           </button>
-
-          <!-- 메뉴 목록 -->
+          
           <div class="nav-menu" id="navMenu">
             <ul class="nav-list">
               <li class="nav-item">
@@ -52,38 +49,259 @@
   </header>
 
   <!-- Main Visual Section -->
-  <section id="main-visual" class="py-5">
+  <section id="main-visual" class="py-5" style="margin-top: 80px;">
     <div class="container">
-        <div class="row align-items-center min-vh-100">
-            <!-- 왼쪽: 텍스트 -->
-            <div class="col-lg-6">
-                <h1 class="display-4 fw-bold mb-4">
-                    개발자들의<br>
-                    특별한 공간
-                </h1>
-                <p class="lead mb-4">
-                    코드와 커피가 만나는 곳, 코딩 카페에서<br>
-                    당신의 아이디어를 현실로 만들어보세요.
-                </p>
-                <div>
-                    <button class="btn btn-primary btn-lg me-3">지금 방문하기</button>
-                    <button class="btn btn-outline-primary btn-lg">메뉴 보기</button>
-                </div>
-            </div>
-            <!-- 오른쪽: 이미지 -->
-            <div class="col-lg-6">
-                <img src="images/main-cafe.jpg" class="img-fluid rounded" alt="카페 내부">
-            </div>
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-6">
+          <h1 class="display-4 fw-bold mb-4 fade-in-up">
+            개발자들의<br>
+            특별한 공간
+          </h1>
+          <p class="lead mb-4 fade-in-up">
+            코드와 커피가 만나는 곳, 코딩 카페에서<br>
+            당신의 아이디어를 현실로 만들어보세요.
+          </p>
+          <div class="fade-in-up">
+            <button class="btn btn-primary btn-lg me-3">지금 방문하기</button>
+            <button class="btn btn-outline-primary btn-lg">메뉴 보기</button>
+          </div>
         </div>
+        <div class="col-lg-6">
+          <img src="backimege.jpg" class="img-fluid rounded fade-in-up" alt="카페 내부">
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">우리 카페의 특별함</h2>
+        <p class="text-muted">코딩 카페만의 특별한 서비스를 만나보세요</p>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://placehold.co/350x200" class="card-img-top" alt="24시간 운영">
+            <div class="card-body">
+              <h5 class="card-title">24시간 운영</h5>
+              <p class="card-text">
+                밤낮없이 코딩에 집중할 수 있도록
+                24시간 연중무휴로 운영됩니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://placehold.co/350x200" class="card-img-top" alt="무료 와이파이">
+            <div class="card-body">
+              <h5 class="card-title">무료 와이파이</h5>
+              <p class="card-text">
+                초고속 인터넷과 안정적인 와이파이로
+                끊김없는 개발 환경을 제공합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://placehold.co/350x200" class="card-img-top" alt="전원 콘센트">
+            <div class="card-body">
+              <h5 class="card-title">전원 콘센트</h5>
+              <p class="card-text">
+                모든 좌석에 콘센트와 USB 포트가
+                준비되어 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Carousel Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">갤러리</h2>
+        <p class="text-muted">아름다운 공간을 만나보세요</p>
+      </div>
+      
+      <div class="carousel-wrapper">
+        <button class="carousel-btn left" id="prevBtn">&#10094;</button>
+        <div class="carousel-container">
+          <div class="carousel" id="carousel">
+            <div class="slide"><img src="images/은하수.jpeg" alt="은하수 이미지 1"></div>
+            <div class="slide"><img src="images/은하수.jpeg" alt="은하수 이미지 2"></div>
+            <div class="slide"><img src="images/은하수.jpeg" alt="은하수 이미지 3"></div>
+            <div class="slide"><img src="images/은하수.jpeg" alt="은하수 이미지 4"></div>
+          </div>
+        </div>
+        <button class="carousel-btn right" id="nextBtn">&#10095;</button>
+        <div class="dots" id="dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rating Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="review-container">
+        <h2 class="text-center mb-4">평점 남기기</h2>
+        <p class="text-center text-muted mb-4">별을 클릭하여 1~5점 중에서 선택하세요</p>
+        
+        <form id="ratingForm" class="text-center">
+          <div class="rating" role="radiogroup" aria-label="평점">
+            <input type="radio" name="rating" id="star5" value="5">
+            <label for="star5" aria-label="5점">★</label>
+            <input type="radio" name="rating" id="star4" value="4">
+            <label for="star4" aria-label="4점">★</label>
+            <input type="radio" name="rating" id="star3" value="3">
+            <label for="star3" aria-label="3점">★</label>
+            <input type="radio" name="rating" id="star2" value="2">
+            <label for="star2" aria-label="2점">★</label>
+            <input type="radio" name="rating" id="star1" value="1">
+            <label for="star1" aria-label="1점">★</label>
+          </div>
+          
+          <div class="mb-3">
+            <textarea id="review-text" class="review-input" placeholder="후기를 남겨주세요..." rows="5"></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">제출하기</button>
+          <div class="mt-3">
+            <span id="currentValue" class="text-muted">선택된 평점: 없음</span>
+            <span id="errorText" class="text-danger d-none ms-3">평점을 선택해주세요.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section id="stay" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">찾아오시는 길</h2>
+        <p class="text-muted">편리한 위치에서 만나보세요</p>
+      </div>
+      
+      <div class="map-section">
+        <div class="map-buttons">
+          <a href="https://gwpa.kr/cheonsang/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            숙소 보기
+          </a>
+          <a href="https://naver.me/GSchAghV" target="_blank" rel="noopener" class="btn btn-success btn-lg">
+            네이버 지도로 보기
+          </a>
+        </div>
+        
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3176.832203403375!2d128.9779331765739!3d37.22795807212833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3561750000534301%3A0x2123356abbbe4a39!2z66ek67SJ7IKwIOyynOyDgeydmOyIsg!5e0!3m2!1sko!2skr!4v1757039005458!5m2!1sko!2skr"
+          width="100%"
+          height="450"
+          class="map-frame"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4">
+          <img src="https://placehold.co/500x400" class="img-fluid rounded" alt="카페 소개">
+        </div>
+        <div class="col-lg-6 mb-4">
+          <h2 class="fw-bold mb-4">코딩과 커피의 완벽한 조화</h2>
+          <p class="mb-3">
+            코딩 카페는 2025년에 오픈한 개발자 전용 카페입니다.
+            조용한 분위기와 편안한 좌석, 그리고 향긋한 커피가
+            여러분의 코딩을 도와드립니다.
+          </p>
+          <p class="mb-4">
+            매주 토요일에는 개발자 미팅이 열리며,
+            다양한 프로그래밍 관련 도서도 구비되어 있습니다.
+          </p>
+          
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <i class="text-primary me-2">✓</i> 조용한 코딩 전용 공간
+            </li>
+            <li class="mb-2">
+              <i class="text-primary me-2">✓</i> 프리미엄 원두 커피
+            </li>
+            <li class="mb-2">
+              <i class="text-primary me-2">✓</i> 대형 모니터 대여 가능
+            </li>
+            <li class="mb-2">
+              <i class="text-primary me-2">✓</i> 개발 서적 무료 열람
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold mb-3">StackUp 카페</h5>
+          <p class="small">
+            개발자들을 위한 특별한 공간<br>
+            24시간 여러분과 함께합니다.
+          </p>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold mb-3">연락처</h5>
+          <p class="small">
+            <strong>주소:</strong> 서울시 강남구 테헤란로 123<br>
+            <strong>전화:</strong> 02-1234-5678<br>
+            <strong>이메일:</strong> info@stackup.kr
+          </p>
+          <div class="mt-3">
+            <a href="#" class="text-white text-decoration-none me-3">페이스북</a>
+            <a href="#" class="text-white text-decoration-none me-3">인스타그램</a>
+            <a href="#" class="text-white text-decoration-none">유튜브</a>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold mb-3">빠른 링크</h5>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="#services" class="text-white text-decoration-none">서비스</a></li>
+            <li class="mb-2"><a href="#about" class="text-white text-decoration-none">소개</a></li>
+            <li class="mb-2"><a href="#stay" class="text-white text-decoration-none">위치</a></li>
+            <li class="mb-2"><a href="#footer" class="text-white text-decoration-none">연락처</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <hr class="border-secondary">
+      <div class="text-center small">
+        <p class="mb-0">© 2025 StackUp 카페. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
-  <!-- Custom JS -->
   <script>
-    // 햄버거 메뉴 토글 기능
+    // 햄버거 메뉴 토글
     document.getElementById('hamburgerBtn').addEventListener('click', function() {
       const navMenu = document.getElementById('navMenu');
       const hamburgerBtn = document.getElementById('hamburgerBtn');
@@ -102,696 +320,113 @@
         hamburgerBtn.classList.remove('active');
       });
     });
-  </script>
-</body>
-</html>
 
-  <!-- Main Visual Section -->
-  <section id="main-visual" class="py-5">
-    <div class="container">
-        <div class="row align-items-center min-vh-100">
-            <!-- 왼쪽: 텍스트 -->
-            <div class="col-lg-6">
-                <h1 class="display-4 fw-bold mb-4">
-                    개발자들의<br>
-                    특별한 공간
-                </h1>
-                <p class="lead mb-4">
-                    코드와 커피가 만나는 곳, 코딩 카페에서<br>
-                    당신의 아이디어를 현실로 만들어보세요.
-                </p>
-                <div>
-                    <button class="btn btn-primary btn-lg me-3">지금 방문하기</button>
-                    <button class="btn btn-outline-primary btn-lg">메뉴 보기</button>
-                </div>
-            </div>
-            <!-- 오른쪽: 이미지 -->
-            <div class="col-lg-6">
-                <img src="images/main-cafe.jpg" class="img-fluid rounded" alt="카페 내부">
-            </div>
-        </div>
-    </div>
-  </section>
+    // 이미지 캐러셀 기능
+    const carousel = document.getElementById("carousel");
+    const slides = document.querySelectorAll(".slide");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const dotsContainer = document.getElementById("dots");
 
-<body>
-    <!-- 2. 메인 비주얼 영역 (메인 섹션 담당) -->
-    <!-- Bootstrap JS -->
-    <script src="<https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js>"></script>
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
-    <section id="services" class="py-5 bg-light">
-    <div class="container">
-        <!-- 제목 -->
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">우리 카페의 특별함</h2>
-            <p class="text-muted">코딩 카페만의 특별한 서비스를 만나보세요</p>
-        </div>
+    let currentIndex = 0;
+    const totalSlides = slides.length;
 
-        <!-- 카드 그리드 -->
-        <div class="row">
-            <!-- 카드 1 -->
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="<https://placehold.co/350x200>" class="card-img-top" alt="서비스1">
-                    <div class="card-body">
-                        <h5 class="card-title">24시간 운영</h5>
-                        <p class="card-text">
-                            밤낮없이 코딩에 집중할 수 있도록
-                            24시간 연중무휴로 운영됩니다.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        <!-- 여기에 큰 이미지와 메인 문구 -->
-    </section>
-
-    <!-- 3. 서비스 소개 영역 (서브 섹션 담당) -->
-
-    <section>
-            <!-- 카드 2 -->
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="<https://placehold.co/350x200>" class="card-img-top" alt="서비스2">
-                    <div class="card-body">
-                        <h5 class="card-title">무료 와이파이</h5>
-                        <p class="card-text">
-                            초고속 인터넷과 안정적인 와이파이로
-                            끊김없는 개발 환경을 제공합니다.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        <!-- 여기에 3-4개 카드 -->
-    </section>
-
-    <---! 지은님의 지도 >
-
-    <section id="stay" class="py-5">
-            <!-- 숙소 보기 버튼과 네이버 지도 버튼을 위아래로 배치 -->
-            <div
-                style="
-                    text-align: center;
-                    margin: 20px 0;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 10px;
-                "
-            >
-                <a
-                    href="https://gwpa.kr/cheonsang/"
-                    target="_blank"
-                    rel="noopener"
-                    class="btn btn-primary"
-                    >숙소 보기</a
-                >
-                <a
-                    href="https://naver.me/GSchAghV"
-                    target="_blank"
-                    rel="noopener"
-                    class="btn btn-success"
-                    >네이버 지도로 보기</a
-                >
-            </div>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3176.832203403375!2d128.9779331765739!3d37.22795807212833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3561750000534301%3A0x2123356abbbe4a39!2z66ek67SJ7IKwIOyynOyDgeydmOyIsg!5e0!3m2!1sko!2skr!4v1757039005458!5m2!1sko!2skr"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-        </section>
-
-        <!-- 5. 푸터 영역 (부팀장) -->
-        <footer>
-            <!-- 여기에 회사 정보 -->
-        </footer>
-
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Custom JS -->
-        <script src="js/main.js"></script>
-    <---! 지은님의 지도 >
-
-    <--! 영철님 버튼>
-<section>    
-  <style>
-    :root {
-      --star-size: 36px;
-      --star-gap: 6px;
-      --star-color: #dadada;
-      --star-active: #ffb400;
-      --focus-ring: 2px solid #1a73e8;
+    // 도트 생성
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement("span");
+      if (i === 0) dot.classList.add("active");
+      dot.addEventListener("click", () => goToSlide(i));
+      dotsContainer.appendChild(dot);
     }
 
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Pretendard, 'Noto Sans KR', Arial, sans-serif;
-      margin: 0;
-      background: #f6f7fb;
-      color: #111;
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
+    function updateCarousel() {
+      const slideWidth = slides[0].offsetWidth;
+      carousel.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      updateDots();
     }
 
-    .wrap {
-      max-width: 720px;
-      margin: 48px auto;
-      padding: 24px;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 6px 24px rgba(0,0,0,.08);
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateCarousel();
     }
 
-    h1 { font-size: 22px; margin: 0 0 16px; }
-    p { margin: 0 0 20px; color: #444; }
-
-    /* Star rating (순수 HTML/CSS) */
-    .rating {
-      display: inline-flex;
-      flex-direction: row-reverse; /* 5 → 1 순서로 배치하면 CSS만으로 hover 처리 쉬움 */
-      gap: var(--star-gap);
-      user-select: none;
-    }
-    .rating input {
-      position: absolute;
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    .rating label {
-      font-size: var(--star-size);
-      color: var(--star-color);
-      cursor: pointer;
-      transition: transform .08s ease;
-    }
-    .rating label:active { transform: scale(.94); }
-
-    /* 체크된 별 및 그 왼쪽(실제 시각적 오른쪽) 별 활성화 */
-    .rating input:checked ~ label,
-    .rating label:hover,
-    .rating label:hover ~ label {
-      color: var(--star-active);
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateCarousel();
     }
 
-    /* 키보드 포커스 표시 */
-    .rating input:focus + label {
-      outline: var(--focus-ring);
-      outline-offset: 4px;
-      border-radius: 6px;
+    function goToSlide(index) {
+      currentIndex = index;
+      updateCarousel();
     }
 
-    .actions { margin-top: 18px; display: flex; gap: 10px; align-items: center; }
-    button {
-      padding: 10px 14px;
-      border: 0;
-      border-radius: 10px;
-      background: #111827;
-      color: #fff;
-      cursor: pointer;
-      font-weight: 600;
+    function updateDots() {
+      const dots = document.querySelectorAll(".dots span");
+      dots.forEach((dot, i) => dot.classList.toggle("active", i === currentIndex));
     }
-    button:focus { outline: var(--focus-ring); }
-    .value { font-variant-numeric: tabular-nums; }
 
-    /* 선택 안 했을 때 에러 표시용 */
-    .error { color: #c62828; display: none; }
-    .error.show { display: inline; }
-  </style>
-</head>
-<body>
-  <main class="wrap">
-    <h1>평점 남기기</h1>
-    <p>별을 눌러 1~5점 중에서 선택하세요. (키보드: Tab → 화살표/스페이스)</p>
+    prevBtn.addEventListener("click", prevSlide);
+    nextBtn.addEventListener("click", nextSlide);
 
-    <form id="ratingForm" aria-labelledby="ratingLegend">
-      <fieldset style="border:0; padding:0; margin:0;">
-        <legend id="ratingLegend" style="position:absolute; left:-9999px;">별점 선택</legend>
+    // 자동 슬라이드
+    setInterval(nextSlide, 5000);
 
-        <!-- 라디오 버튼 5개(접근성 위해 실제 입력은 라디오) -->
-        <div class="rating" role="radiogroup" aria-label="평점">
-          <!-- 주의: row-reverse라서 시각적으로는 ★★★★★ 순서 -->
-          <input type="radio" name="rating" id="star5" value="5" />
-          <label for="star5" aria-label="5점">★</label>
-
-          <input type="radio" name="rating" id="star4" value="4" />
-          <label for="star4" aria-label="4점">★</label>
-
-          <input type="radio" name="rating" id="star3" value="3" />
-          <label for="star3" aria-label="3점">★</label>
-
-          <input type="radio" name="rating" id="star2" value="2" />
-          <label for="star2" aria-label="2점">★</label>
-
-          <input type="radio" name="rating" id="star1" value="1" />
-          <label for="star1" aria-label="1점">★</label>
-        </div>
-
-        <div class="actions">
-          <button type="submit">제출</button>
-          <span class="value" id="currentValue" aria-live="polite">선택: 없음</span>
-          <span class="error" id="errorText">평점을 선택해주세요.</span>
-        </div>
-      </fieldset>
-    </form>
-  </main>
-
-  <script>
+    // 평점 시스템
     const form = document.getElementById('ratingForm');
     const currentValue = document.getElementById('currentValue');
     const errorText = document.getElementById('errorText');
+    const reviewText = document.getElementById('review-text');
 
-    // 라디오가 변경될 때 현재 값 표시
     form.addEventListener('change', () => {
       const value = new FormData(form).get('rating');
       if (value) {
-        currentValue.textContent = `선택: ${value}점`;
-        errorText.classList.remove('show');
+        currentValue.textContent = `선택된 평점: ${value}점`;
+        errorText.classList.add('d-none');
       }
     });
 
-    // 제출 예시 (실제 전송 없이 처리)
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const data = new FormData(form);
       const value = data.get('rating');
+      const review = reviewText.value.trim();
 
       if (!value) {
-        errorText.classList.add('show');
+        errorText.classList.remove('d-none');
         return;
       }
 
-      alert(`감사합니다! ${value}점으로 제출되었어요.`);
-      // TODO: 실제 서비스에서는 여기서 fetch() 등으로 서버에 전송하세요.
+      if (!review) {
+        alert('후기를 작성해주세요!');
+        return;
+      }
+
+      alert(`감사합니다! ${value}점 평점과 후기가 제출되었습니다.`);
+      form.reset();
+      currentValue.textContent = '선택된 평점: 없음';
+    });
+
+    // 초기 캐러셀 설정
+    updateCarousel();
+
+    // 스크롤 애니메이션
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-up');
+        }
+      });
+    }, observerOptions);
+
+    // 애니메이션을 적용할 요소들 관찰
+    document.querySelectorAll('.card, .review-container').forEach(el => {
+      observer.observe(el);
     });
   </script>
-  <--! 영철님 버튼>
-  <--!성원님 이미지 섹션>
-  <!-- Slider 이미지 섹션 -->
-    <div class="carousel-wrapper">
-        <button class="btn left" id="prevBtn">&#10094;</button>
-        <div class="carousel-container">
-            <div class="carousel" id="carousel">
-            <div class="slide"><img src="images/은하수.jpeg" alt="이미지1"></div>
-            <div class="slide"><img src="images/은하수.jpeg" alt="이미지2"></div>
-            <div class="slide"><img src="images/은하수.jpeg" alt="이미지3"></div>
-            <div class="slide"><img src="images/은하수.jpeg" alt="이미지4"></div>
-            </div>
-        </div>
-        <button class="btn right" id="nextBtn">&#10095;</button>
-    </div>
-
-    <div class="dots" id="dots"></div>
-
-
-    <!-- 🔽 도트 리스트 -->
-    <div class="listNav" id="listNav"></div>
-
-
-
-
-<script>
-        const carousel = document.getElementById("carousel");
-        const slides = document.querySelectorAll(".slide");
-        const prevBtn = document.getElementById("prevBtn");
-        const nextBtn = document.getElementById("nextBtn");
-        const dotsContainer = document.getElementById("dots");
-
-        let currentIndex = 0;
-        const totalSlides = slides.length;
-
-        // 도트 생성
-        for (let i = 0; i < totalSlides; i++) {
-        const dot = document.createElement("span");
-        if (i === 0) dot.classList.add("active");
-        dot.addEventListener("click", () => goToSlide(i));
-        dotsContainer.appendChild(dot);
-        }
-
-        function updateCarousel() {
-        const slideWidth = slides[0].offsetWidth + 20; // margin 포함
-        carousel.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-        updateDots();
-        }
-
-        function nextSlide() {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        updateCarousel();
-        }
-
-        function prevSlide() {
-        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-        updateCarousel();
-        }
-
-        function goToSlide(index) {
-        currentIndex = index;
-        updateCarousel();
-        }
-
-        function updateDots() {
-        const dots = document.querySelectorAll(".dots span");
-        dots.forEach((dot, i) => dot.classList.toggle("active", i === currentIndex));
-        }
-
-        prevBtn.addEventListener("click", prevSlide);
-        nextBtn.addEventListener("click", nextSlide);
-
-        // 초기 세팅
-        updateCarousel();
-    </script>
-
-
-
-
-
-<style>
-.carousel-wrapper {
-  position: relative;
-  width: 100%;       /* 전체 화면 너비를 사용 */
-  max-width: 300px;  /* 중앙 이미지 폭 */
-  margin: 50px auto;
-}
-
-.carousel-container {
-  overflow: hidden;
-}
-
-.carousel {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  min-width: 100%; /* 한 화면에 1개 */
-  margin: 0 10px;  /* 좌우 이미지 살짝 보이게 */
-  display: flex;
-  justify-content: center;
-}
-
-.slide img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  background: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 2;
-  border-radius: 50%;
-}
-
-.left { left: -15px; }
-.right { right: -15px; }
-
-.dots {
-  text-align: center;
-  margin-top: 15px;
-}
-
-.dots span {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin: 0 5px;
-  background: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.dots span.active {
-  background: #007bff;
-}
-</style>
-<--!성원님 이미지 섹션>
-
-<--!근중님 후기섹션>
-<section>
- <style>
-        /* CSS 스타일 */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .review-container {
-            width: 90%;
-            max-width: 600px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            text-align: center;
-            box-sizing: border-box;
-        }
-
-        .review-container h2 {
-            margin-bottom: 20px;
-            color: #333333;
-        }
-
-        .rating-stars {
-            font-size: 2rem;
-            color: #ccc;
-            margin-bottom: 20px;
-            cursor: pointer;
-        }
-
-        .rating-stars .star {
-            display: inline-block;
-            transition: color 0.2s;
-        }
-
-        .rating-stars .star.active {
-            color: #ffc107;
-        }
-
-        .review-input {
-            width: 100%;
-            height: 150px;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            resize: vertical;
-            font-size: 1.2rem;
-            box-sizing: border-box;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 12px;
-            background-color: #ffbb00;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .submit-btn:hover {
-            background-color: #0056b3;
-        }
-
-        /* 반응형 디자인 */
-        @media (max-width: 768px) {
-            .review-container {
-                width: 95%;
-                padding: 15px;
-            }
-
-            .review-input {
-                height: 120px;
-            }
-
-            .rating-stars {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<div class="review-container">
-    <h2>이용 후 느낀점</h2>
-    <div id="rating-stars" class="rating-stars">
-        <span class="star" data-value="1">&#9733;</span>
-        <span class="star" data-value="2">&#9733;</span>
-        <span class="star" data-value="3">&#9733;</span>
-        <span class="star" data-value="4">&#9733;</span>
-        <span class="star" data-value="5">&#9733;</span>
-    </div>
-    <textarea id="review-text" class="review-input" placeholder="후기를 남겨 주세요..."></textarea>
-    <button class="submit-btn" onclick="submitReview()">작성 완료</button>
-</div>
-
-<script>
-    // JavaScript 코드
-    const ratingContainer = document.getElementById('rating-stars');
-    const stars = ratingContainer.querySelectorAll('.star');
-    let userRating = 0;
-
-    stars.forEach(star => {
-        star.addEventListener('click', () => {
-            const value = parseInt(star.getAttribute('data-value'));
-            userRating = value;
-            updateStars(value);
-        });
-    });
-
-    function updateStars(rating) {
-        stars.forEach(star => {
-            if (parseInt(star.getAttribute('data-value')) <= rating) {
-                star.classList.add('active');
-            } else {
-                star.classList.remove('active');
-            }
-        });
-    }
-
-    function submitReview() {
-        const reviewText = document.getElementById('review-text').value;
-        if (userRating === 0) {
-            alert('별점을 선택해주세요!');
-            return;
-        }
-        if (reviewText.trim() === '') {
-            alert('후기를 작성해주세요!');
-            return;
-        }
-</script>
-
-<--!근중님 후기섹션>
- </section>
-
-        <!-- 여기에 상세 설명 -->
-
-<section>
-            <!-- 카드 3 -->
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="<https://placehold.co/350x200>" class="card-img-top" alt="서비스3">
-                    <div class="card-body">
-                        <h5 class="card-title">전원 콘센트</h5>
-                        <p class="card-text">
-                            모든 좌석에 콘센트와 USB 포트가
-                            준비되어 있습니다.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="about" class="py-5">
-    <div class="container">
-        <div class="row align-items-center">
-
-            <!-- 왼쪽 이미지 -->
-            <div class="col-lg-6 mb-4">
-                <img src="<https://placehold.co/500x400>" class="img-fluid rounded" alt="카페 소개">
-            </div>
-            <!-- 오른쪽 텍스트 -->
-            <div class="col-lg-6 mb-4">
-                <h2 class="fw-bold mb-4">코딩과 커피의 완벽한 조화</h2>
-                <p class="mb-3">
-                    코딩 카페는 2025년에 오픈한 개발자 전용 카페입니다.
-                    조용한 분위기와 편안한 좌석, 그리고 향긋한 커피가
-                    여러분의 코딩을 도와드립니다.
-                </p>
-                <p class="mb-3">
-                    매주 토요일에는 개발자 미팅이 열리며,
-                    다양한 프로그래밍 관련 도서도 구비되어 있습니다.
-                </p>
-
-                <!-- 특징 리스트 -->
-                <ul class="list-unstyled">
-                    <li class="mb-2">
-                        <i class="text-primary">✓</i> 조용한 코딩 전용 공간
-                    </li>
-                    <li class="mb-2">
-                        <i class="text-primary">✓</i> 프리미엄 원두 커피
-                    </li>
-                    <li class="mb-2">
-                        <i class="text-primary">✓</i> 대형 모니터 대여 가능
-                    </li>
-                    <li class="mb-2">
-                        <i class="text-primary">✓</i> 개발 서적 무료 열람
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-            <!-- 빠른 링크 -->
-            <div class="col-md-4 mb-4">
-                <h5 class="fw-bold mb-3">빠른 링크</h5>
-                <ul class="list-unstyled small">
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">메뉴</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">예약</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">이벤트</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">채용</a></li>
-                </ul>
-            </div>
-
-            <!-- 빠른 링크 -->
-
-</section>
 </body>
-
-
-    <!-- 5. 푸터 영역 (부팀장) -->
-<footer id="footer" class="bg-dark text-white py-5">
-    <div class="container">
-        <div class="row">
-            <!-- 회사 정보 -->
-            <div class="col-md-4 mb-4">
-                <h5 class="fw-bold mb-3">코딩 카페</h5>
-                <p class="small">
-                    개발자들을 위한 특별한 공간<br>
-                    24시간 여러분과 함께합니다.
-                </p>
-            </div>
-
-            <!-- 연락처 -->
-            <div class="col-md-4 mb-4">
-                <h5 class="fw-bold mb-3">연락처</h5>
-                <p class="small">
-                    <strong>주소:</strong> 서울시 강남구 테헤란로 123<br>
-                    <strong>전화:</strong> 02-1234-5678<br>
-                    <strong>이메일:</strong> info@codingcafe.kr
-                </p>
-                <!-- SNS 아이콘 -->
-                <div class="mt-3">
-                    <a href="#" class="text-white me-3">페이스북</a>
-                    <a href="#" class="text-white me-3">인스타그램</a>
-                    <a href="#" class="text-white">유튜브</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 저작권 -->
-        <hr class="border-secondary">
-        <div class="text-center small">
-            <p class="mb-0">© 2025 코딩 카페. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
-    <!-- 푸터 영역-->
 </html>
