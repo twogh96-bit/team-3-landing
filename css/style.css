@@ -1,121 +1,232 @@
+/* 헤더 스타일 */
+*{
+  background-color: black;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+.header-nav {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 0;
+  transition: all 0.3s ease;
+}
 
-    #main-header{
-        background-color: #c5d29c;
-        color: white;
-        padding: 20px 0;
-        text-align: center;
-    }
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
 
-    #main-footer{
-        background-color: #c5d29c;
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-    }
+/* 로고 스타일 */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  z-index: 1001;
+}
 
-    .highlight{
-        color: #ff6347; /* Tomato */
-        font-weight: bold;
-    }
+.logo img {
+  height: 40px;
+  transition: all 0.3s ease;
+}
 
-    .post.featured {
-        border-left: 5px solid #3d474d; /* Highlighted post */
-    }
+.logo:hover img {
+  transform: scale(1.05);
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-    }
+/* 햄버거 버튼 스타일 */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
 
-    header {
-      background: #35424a;
-      color: #ffffff;
-      padding: 20px 0;
-      text-align: center;
-    }
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  transform-origin: 1px;
+}
 
-    header h1 {
-      margin-bottom: 10px;
-    }
+.hamburger-btn.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg);
+}
 
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-    }
+.hamburger-btn.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
 
-    nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
+.hamburger-btn.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg);
+}
 
-    nav ul li a {
-      color: #ffffff;
-      text-decoration: none;
-    }
+/* 네비게이션 메뉴 스타일 */
+.nav-menu {
+  display: flex;
+}
 
-    main {
-      padding: 20px;
-    }
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
 
-    .intro {
-      background-color: #e2e2e2;
-      padding: 20px;
-      border-radius: 5px;
-    }
+.nav-item {
+  position: relative;
+}
 
-    .intro h2 {
-      color: #35424a;
-    }
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
 
-    .highlight {
-      color: #ff6347; /* Tomato */
-      font-weight: bold;
-    }
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s;
+}
 
-    .content {
-      margin-top: 20px;
-    }
+.nav-link:hover {
+  color: #00d4ff;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
 
-    .post {
-      background-color: rgb(243, 221, 221);
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 5px;
-    }
+.nav-link:hover::before {
+  left: 100%;
+}
 
-<section id="main-visual" class="py-5">
-    <div class="container">
-        <div class="row align-items-center min-vh-100">
-            <!-- 왼쪽: 텍스트 -->
-            <div class="col-lg-6">
-                <h1 class="display-4 fw-bold mb-4">
-                    개발자들의<br>
-                    특별한 공간
-                </h1>
-                <p class="lead mb-4">
-                    코드와 커피가 만나는 곳, 코딩 카페에서<br>
-                    당신의 아이디어를 현실로 만들어보세요.
-                </p>
-                <div>
-                    <button class="btn btn-primary btn-lg me-3">지금 방문하기</button>
-                    <button class="btn btn-outline-primary btn-lg">메뉴 보기</button>
-                </div>
-            </div>
-            <!-- 오른쪽: 이미지 -->
-            <div class="col-lg-6">
-                <img src="images/main-cafe.jpg" class="img-fluid rounded" alt="카페 내부">
-            </div>
-        </div>
-    </div>
+/* 모바일 반응형 스타일 */
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.9));
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .nav-link {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 15px 30px;
+    border: 2px solid transparent;
+  }
+
+  .nav-link:hover {
+    border-color: #00d4ff;
+    background: rgba(0, 212, 255, 0.1);
+    transform: scale(1.05);
+  }
+}
+
+/* 태블릿 반응형 */
+@media (max-width: 992px) and (min-width: 769px) {
+  .nav-list {
+    gap: 20px;
+  }
+  
+  .nav-link {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+/* 스크롤 시 헤더 스타일 변경 */
+.header-nav.scrolled {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.8));
+  padding: 10px 0;
+}
+
+/* body padding 추가 (fixed header 때문에) */
+body {
+  padding-top: 80px;
+}
+
+/* Main Visual Section 스타일 */
+#main-visual {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* 애니메이션 효과 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-link {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.nav-item:nth-child(1) .nav-link { animation-delay: 0.1s; }
+.nav-item:nth-child(2) .nav-link { animation-delay: 0.2s; }
+.nav-item:nth-child(3) .nav-link { animation-delay: 0.3s; }
+.nav-item:nth-child(4) .nav-link { animation-delay: 0.4s; }
+
+/* 호버 효과 개선 */
+.header-nav:hover {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.85));
+}
+
 </section>
